@@ -32,5 +32,4 @@ connection.connect(
 )
 app.use("/api",routes)
 //server here
-console.log(fs.readFileSync(process.env.CA_PATH || "./ca.pem"))
 app.listen(process.env.PORT || 8000, () => { console.log("Server Running") })
