@@ -24,10 +24,6 @@ connection.connect(
         }
     }
 )
-
-app.get("/",(req,res)=>{
-    return res.send({message : "Hello!"})
-})
 app.use("/api",routes)
 //server here
 app.listen(process.env.PORT || 8000, () => { console.log("Server Running") })

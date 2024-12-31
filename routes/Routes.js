@@ -10,7 +10,9 @@ const { getAllGames, getGameById, getGameByName } = require("../controllers/game
 const routes = express.Router();
 
 //routes definations 
-
+routes.get("/",(req,res)=>{
+    return res.send({message : "Hello"})
+})
 //admin
 routes.get("/admin-login", loginCheck)
 
