@@ -11,10 +11,10 @@ const connection = mysql.createConnection({
     password: process.env.PASSWORD,
     port: process.env.DB_PORT,
     database: process.env.DATABASE,
-    ssl:{
-        rejectUnauthorized:false,
-        ca: process.env.CA_PATH
-    }
+    // ssl:{
+    //     rejectUnauthorized:false,
+    //     ca: process.env.CA_PATH
+    // }
 })
 
 module.exports = { connection }
