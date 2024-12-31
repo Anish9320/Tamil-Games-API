@@ -11,6 +11,10 @@ const connection = mysql.createConnection({
     password: process.env.PASSWORD,
     port: process.env.DB_PORT,
     database: process.env.DATABASE,
+    ssl:{
+        rejectUnauthorized:true,
+        ca: fs.readFileSync(process.env.CA_PATH || "./ca_certificate.pem")
+    }
 })
 
 module.exports = { connection }
