@@ -10,14 +10,14 @@ const cors = require('cors')
 
 const app = express()
 
-//middleware
-app.use(authCheck) //auth
-app.use(express.json()) //to handle data
-app.use(express.urlencoded({ extended: false })) //to handle data
 app.use(cors({
     origin : 'http://localhost:3000',
     methods : 'GET,POST,PUT,DELETE'
 }))
+//middleware
+app.use(authCheck) //auth
+app.use(express.json()) //to handle data
+app.use(express.urlencoded({ extended: false })) //to handle data
 //database connection(done)
 connection.connect(
     (error) => {

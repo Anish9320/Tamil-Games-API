@@ -8,7 +8,6 @@ const { userLogin, createAccount } = require("../controllers/usersControllers");
 const { getAllGames, getGameById, getGameByName } = require("../controllers/gamesControllers");
 //object 
 const routes = express.Router();
-
 //routes definations 
 routes.get("/",(req,res)=>{
     return res.send({message : "Hello"})
