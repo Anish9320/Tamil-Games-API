@@ -13,7 +13,7 @@ const connection = mysql.createConnection({
     database: process.env.DATABASE,
     ssl:{
         rejectUnauthorized:true,
-        ca: fs.readFileSync(process.env.CA_PATH || "./ca.pem")
+        ca: process.env.CA_PATH
     }
 })
 
