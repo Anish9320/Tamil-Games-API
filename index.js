@@ -14,6 +14,7 @@ app.use(cors({
     origin : 'http://localhost:3000',
     methods : 'GET,POST,PUT,DELETE'
 }))
+
 //middleware
 app.use(authCheck) //auth
 app.use(express.json()) //to handle data
