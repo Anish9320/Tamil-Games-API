@@ -5,7 +5,7 @@ const { connection } = require("./config/dbConnection")
 const { authCheck } = require("./middleware/auth")
 const { routes } = require("./routes/Routes")
 const cors = require('cors')
-
+const fs = require("fs")
 //ends here
 
 const app = express()
@@ -32,4 +32,5 @@ connection.connect(
 )
 app.use("/api",routes)
 //server here
+console.log(fs.readFileSync(process.env.CA_PATH || "./ca.pem"))
 app.listen(process.env.PORT || 8000, () => { console.log("Server Running") })
