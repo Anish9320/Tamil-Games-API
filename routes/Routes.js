@@ -16,7 +16,7 @@ routes.get("/",(req,res)=>{
 routes.get("/admin-login", loginCheck)
 
 //users
-routes.get("/user-login", userLogin)
+routes.post("/user-login", userLogin)
 routes.post("/create-account", createAccount)
 
 //games card 
