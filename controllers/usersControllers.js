@@ -41,7 +41,7 @@ const createAccount = (req, res) => {
         [0,username,password,null],
         (error,result,fields)=>{
             if(error){
-                return res.status(500).send({message: "User Already Exists!",error})
+                return res.status(500).send({message: "Sql Error!",error})
             }
             return res.status(201).send({message : "User created!", result})
         }
