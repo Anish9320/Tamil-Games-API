@@ -22,6 +22,6 @@ routes.post("/create-account", createAccount)
 //games card 
 routes.get("/get-games",getAllGames)
 routes.get("/get-game/:id",getGameById)
-routes.get("/get-games/:game_name",getGameByName)
+routes.get("/get-game-name/:game_name",getGameByName)
 
 module.exports = { routes }
