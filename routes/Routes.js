@@ -13,7 +13,7 @@ routes.get("/",(req,res)=>{
     return res.send({message : "Hello"})
 })
 //admin
-routes.get("/admin-login", loginCheck)
+routes.post("/admin-login", loginCheck)
 
 //users
 routes.post("/user-login", userLogin)
